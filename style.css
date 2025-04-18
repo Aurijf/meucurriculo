@@ -1,0 +1,205 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 20px;
+}
+
+.profile {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 3px solid #ddd;
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.profile h1 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.profile .profession {
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.profile .contact {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.profile .contact h2 {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.profile .contact p {
+    font-size: 0.95em;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.profile .contact i {
+    margin-right: 5px;
+    color: #007bff;
+}
+
+.profile .skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    border-top: 1px solid #eee;
+    width: 100%;
+}
+
+.profile .skills h2 {
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.profile .skills .skills-list {
+    list-style: none; /* Remove os marcadores de lista padrão */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.profile .skills .skills-list .skill-item {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.main-content {
+    padding: 30px;
+}
+
+.main-content h2 {
+    font-size: 1.6em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+}
+
+.formation-item, .experience-item {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.formation-item .year, .experience-item .year {
+    width: 120px;
+    font-weight: bold;
+    color: #555;
+}
+
+.formation-item p, .experience-item p {
+    line-height: 1.5;
+    color: #555;
+}
+
+.summary p {
+    line-height: 1.7;
+    color: #555;
+}
+
+.projects ul, .certifications ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.projects li, .certifications li {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.projects a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.projects a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .profile {
+        order: 1;
+    }
+
+    .main-content {
+        order: 2;
+    }
+
+    .main-content .skills .skills-list {
+        justify-content: center;
+    }
+
+    .formation-item, .experience-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .formation-item .year, .experience-item .year {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
